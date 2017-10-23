@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Quiz</title>
+		<link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Quiz</a>
+    </nav>
+    <main role="main" class="container">
+			<!-- answers -->
+			<div class="card" id="answersContainer">
+			  <div class="card-header">
+			    Answers summary
+			  </div>
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">Category</th>
+				      <th scope="col">Last round</th>
+				      <th scope="col">Average</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>Valid</td>
+				      <td id="thisRoundValid"></td>
+				      <td id="averageValid"></td>
+				    </tr>
+				    <tr>
+				      <td>Invalid</td>
+				      <td id="thisRoundInvalid"></td>
+				      <td id="averageInvalid"></td>
+				    </tr>
+				    <tr>
+				      <td>Missed</td>
+				      <td id="thisRoundMissed"></td>
+				      <td id="averageMissed"></td>
+				    </tr>
+				  </tbody>
+				</table>
+			  </div>
+			</div>
+			<!-- start button -->
+			<div class="card text-center" id="startQuizContainer">
+			  <div class="card-body">
+			    <button class="btn btn-success btn-lg" id="startQuizButton">Start quiz</button>
+			  </div>
+			</div>
+			<!-- progress bars -->
+			<div class="card" id="progressBarsContainer">
+				<div class="card-body">
+					<h6 class="card-subtitle mb-2 text-muted">Answers:</h6>
+					<div class="progress" style="height: 25px" id="answersProgressBarsContainer">
+						<div class="progress-bar bg-success" id="validAnswersProgressBar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">2</div>
+					  <div class="progress-bar bg-danger" id="invalidAnswersProgressBar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">1</div>
+					  <div class="progress-bar bg-secondary" id="missedAnswersProgressBar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">3</div>
+					</div>
+					<h6 class="card-subtitle mb-2 text-muted">Time left:</h6>
+					<div class="progress" id="timePogressBarContainer" style="height: 25px">
+						<div class="progress-bar bg-primary" id="timeProgressBar" role="progressbar" style="height: 25px" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+			</div>
+			<!-- question -->
+			<div class="card" id="questionContainer">
+			  <div class="card-header" id="questionTitle">
+			    Question title
+			  </div>
+			  <div class="card-body">
+			    <p class="card-text" id="questionText">With supporting text below as a natural lead-in to additional content.</p>
+					<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="exampleRadios" id="answer1" value="option1">
+					    <span id="answer1Text">Answer 1</span>
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="exampleRadios" id="answer2" value="option2">
+					    <span id="answer2Text">Answer 2</span>
+					  </label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="answer3" value="option3">
+							<span id="answer3Text">Answer 3</span>
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="answer4" value="option4">
+							<span id="answer4Text">Answer 3</span>
+						</label>
+					</div>
+			  </div>
+			</div>
+			<!-- end button -->
+			<div class="card text-center" id="endQuizContainer">
+				<div class="card-body">
+					<button class="btn btn-danger btn-lg" id="endQuizButton">End quiz</button>
+				</div>
+			</div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

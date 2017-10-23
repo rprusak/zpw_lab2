@@ -1,0 +1,32 @@
+body {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+#startQuizContainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#progressBarsContainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#questionContainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#endQuizContainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#answersProgressBarsContainer {
+	margin-bottom: 10px;
+}
+
+#timePogressBarContainer {
+	/*margin-top: 10px;*/
+}
